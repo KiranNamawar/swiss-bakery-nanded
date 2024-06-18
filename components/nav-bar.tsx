@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function NavBar() {
+export function HeaderNavBar() {
     return (
         <div>
-            <header className="flex items-center justify-between bg-blue-500 p-4 text-white">
+            <header className="flex items-center justify-between p-4 text-white md:bg-blue-500">
                 <h1 className="text-2xl font-bold">Swiss Bakery and Sweets</h1>
-                <nav>
+                <nav className="hidden md:block">
                     <ul className="flex space-x-4 md:space-x-10">
                         <li>
                             <Link href="/">Home</Link>
@@ -14,30 +14,32 @@ export default function NavBar() {
                         <li>
                             <Link href="/menu">Menu</Link>
                         </li>
-                        <li className='hidden md:block'>
+                        <li>
                             <p>Order Online</p>
-                            {/* <div className='flex space-x-5 px-3'>
-                                <Link href="https://www.swiggy.com/menu/795190">
-                                    <Image
-                                        src="/swiggy-logo.svg"
-                                        alt="Swiggy logo"
-                                        width={20}
-                                        height={20}
-                                    />
-                                </Link>
-                                <Link href="https://zomato.onelink.me/xqzv/2wl0xc6n">
-                                    <Image
-                                        src="/zomato-logo.svg"
-                                        alt="Zomato logo"
-                                        width={50}
-                                        height={20}
-                                    ></Image>
-                                </Link>
-                            </div> */}
                         </li>
                     </ul>
                 </nav>
             </header>
         </div>
+    )
+}
+
+export function FooterNavBar() {
+    return (
+        <footer className="p-4 text-white sticky bottom-0 left-0 right-0">
+            <nav className="md:hidden">
+                <ul className='flex items-center justify-between'>
+                    <li>
+                        <Link href="">Visit Store</Link>
+                    </li>
+                    <li>
+                        <Link href="">Menu</Link>
+                    </li>
+                    <li>
+                        <Link href="">Order Online</Link>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
     )
 }

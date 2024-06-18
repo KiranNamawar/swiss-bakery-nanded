@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Trispace } from 'next/font/google'
 import './globals.css'
-import NavBar from '@/components/nav-bar'
+import {HeaderNavBar, FooterNavBar} from '@/components/nav-bar'
 
 const trispace = Trispace({ subsets: ['latin'] })
 
@@ -19,8 +19,9 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={trispace.className}>
-                <NavBar />
+                <HeaderNavBar />
                 {children}
+                <FooterNavBar />
             </body>
         </html>
     )

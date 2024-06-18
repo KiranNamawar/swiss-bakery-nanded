@@ -33,7 +33,7 @@ export function FooterNavBar() {
                         <Link href="">Visit Store</Link>
                     </li>
                     <li>
-                        <Link href="">Menu</Link>
+                        <Link href="/menu">Menu</Link>
                     </li>
                     <li>
                         <Link href="">Order Online</Link>

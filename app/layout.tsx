@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Trispace } from 'next/font/google'
 import './globals.css'
-import {HeaderNavBar, FooterNavBar} from '@/components/nav-bar'
+import { HeaderNavBar, FooterNavBar } from '@/app/components/nav-bar'
 
 const trispace = Trispace({ subsets: ['latin'] })
 

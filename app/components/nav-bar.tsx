@@ -4,7 +4,7 @@ import Link from 'next/link'
 export function HeaderNavBar() {
     return (
         <div>
-            <header className="flex items-center justify-between p-4 text-white md:bg-blue-500">
+            <header className="flex items-center justify-between text-white">
                     <Link href="/" className='flex'>
                         <Image
                             src="/icon.png"

@@ -1,8 +1,11 @@
-'use client';
+'use client'
 
 import Image from 'next/image'
-import { MenuItem } from './util/models'
+import { MenuItem, Poster } from './util/models'
 import { useEffect, useState } from 'react'
+import Carousel from './components/carousel'
+
+const highlights: Poster[] = []
 
 export default function HomePage() {
     const [menu, setMenu] = useState([] as MenuItem[])
@@ -14,9 +17,13 @@ export default function HomePage() {
     const bestSellers = menu.filter((item) => item.isBestSeller)
     return (
         <main className="">
+            
             <h1 className="">
                 Welcome to <span className="">Swiss Bakery and Sweets</span>
             </h1>
+
+            <Carousel posters={highlights} />
+
             <h2 className="">Best Sellers</h2>
             <div className="">
                 {bestSellers.map((item) => (
@@ -30,7 +37,7 @@ export default function HomePage() {
                         />
                         <h2 className="">{item.name}</h2>
                         <p className="">{item.description}</p>
-                        <p className="">${item.price}</p>
+                        <p className="">₹{item.price}</p>
                     </div>
                 ))}
             </div>

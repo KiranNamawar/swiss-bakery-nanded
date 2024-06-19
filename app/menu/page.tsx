@@ -28,7 +28,6 @@ export default function MenuPage() {
     function handleCategoryClick(category: string) {
         const filteredMenu = menu.filter((item) => item.category === category)
         setMenuItems(filteredMenu)
-        console.log(filteredMenu)
     }
 
     return (

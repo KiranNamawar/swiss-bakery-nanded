@@ -12,6 +12,12 @@ export class MenuItem {
     ) {}
 }
 
-enum Category {
-    // TODO: Add categories
+export class Poster {
+    constructor(
+        public name: string,
+        public image: string,
+        public route: string,
+    ) {}
 }
+
+
